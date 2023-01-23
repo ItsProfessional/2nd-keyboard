@@ -3,6 +3,7 @@ Menu, Tray, Icon, shell32.dll, 156
 ;SetWorkingDir %A_ScriptDir%
 #SingleInstance force ;only one instance of this script may run at a time!
 
+;I moved filemover to its own script, since using it would prevent all other scripts from running, until the file was completely moved
 
 ;THIS SCRIPT IS REALLY COOL AND USEFUL
 

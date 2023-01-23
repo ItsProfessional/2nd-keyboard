@@ -1,0 +1,191 @@
+;-------------------------------------------------------------------------
+; If you have CUE (Corsair Utility Engine) open, and your keyboard selected 
+; (in all its RGB glory), it will take a lot longer to switch between applications. 
+; to fix this lag, simply close CUE, or select some other "demo" peripheral.
+;------------------------------------------------------------------------
+
+; For some of the firefox/chrome shortcuts, you have to install the ACC library into AutoHotKey (it's pretty easy, just follow the instructions on this page.)
+; https://www.autohotkey.com/boards/viewtopic.php?f=6&t=26201
+
+
+
+
+
+
+;----------------------------------------------------------------------------------
+; RELEVANT SHORTCUTS I HAVE ASSIGNED IN PREMIERE'S BUILT IN KEYBOARD SHORTCUTS MENU.
+; YOU MUST ADD THESE ASSIGNMENTS TOO. THEY ARE ESSENTIAL FOR THE SCRIPTS TO WORK.
+
+; YOU CAN SEE/USE ALL MY PREMEIRE SHORTCUTS, THEY ARE HERE! https://github.com/TaranVH/2nd-keyboard/blob/master/Settings_and_shortcuts/
+
+;----------------------------------------------------------------------------------
+; KEYS                  PREMIERE FUNCTIONS
+;----------------------------------------------------------------------------------
+; ctrl alt s            select clip at playhead. Probably this should be moved to a different series of keystrokes, so that "u" is freed for something else.
+; backspace             ripple delete --- but I don't use that in AutoHotKey because it's dangerous. This should be changed to something else; I use SHIFT C now.
+; shift c               ripple delete --- very convenient for left handed use. Premiere's poor track targeting makes ripple delete less useful than it could be.
+; ctrl alt shift d      ripple delete --- I never type this in manually - long shortcuts like this are great for using AHK or a macro to press them.
+; delete                delete
+; c                     delete --- I also have this on "C" because it puts it directly under my left hand. Very quick.
+; ctrl r                speed/duration panel
+; shift 1               toggle track targeting for AUDIO LAYER 1
+; shift 2               toggle track targeting for AUDIO LAYER 2. And so on up to 8.
+; alt 1                 toggle track targeting for VIDEO LAYER 1
+; alt 2                 toggle track targeting for VIDEO LAYER 2. And so on up to 8. I wish there were DEDICATED shortcuts to enable and disable ALL layers
+; ctrl p                toggle "selection follows playhead" (for human to use)
+; ctrl alt shift 3      Application > Window > Timeline (default is shift 3)
+; ctrl alt shift 1      Application > Window > Project  (This sets the focus onto a BIN.) (default is SHIFT 1)
+; ctrl alt shift 4      Application > Window > program monitor (Default is SHIFT 4)
+; ctrl alt shift 5      Application > Window > Effect Controls (Default is SHIFT 5)
+; ctrl alt shift 7      Application > Window > Effects   (NOT the Effect Controls panel) (Default is SHIFT 7) --- The defaults are stupid. SHIFT 7 is an ampersand if you happen to be in a text box somewhere...
+; F2                    gain
+; F3                    audio channels --- To be pressed manually by the user. (this might change in the future.)
+; ctrl alt shift a      audio channels --- (I will NOT change this, so that it can always be reliably triggered using AutoHotKey.)
+; shift F               From source monitor, match frame.
+; ctrl /                Overwrite (the default is "." (period))
+; ctrl b                select find box - This is such a useful function when you pair it the the effects panel!!
+; ---ctrl alt F         select find box —OBSOLETE ---
+; ctrl shift 6			Apply source assignment preset 1 (set to V5 and A3)
+; ctrl ; (semicolon)	Add Marker
+; ctrl alt k			Remove selected marker
+; ctrl shift alt 9 		activate lumetri scopes
+; ctrl alt D   			"deselect all" (clips on the timeline)
+; ctrl alt shift K 	 	"shuttle stop"
+; CTRL SEMICOLON 		"(add) marker."
+; ctrl shift alt R		is "reset to saved layout" (workspace)
+; Media_Stop::^numpad7  select label group
+; ctrl alt P            pin to clip
+; ^!+j 					lock/unlock all audio tracks
+; ^!+l 					lock/unlock all video tracks
+; ^!+, 					show audio keyframes (on timeline)
+; ^!+n 					toggle audio names (on timeline)
+; ^!+/ 					Show through edits
+; ^+6					Source Assignment Preset 1
+; ^+7					Source Assignment Preset 2 (reserved)
+; ^+8					Source Assignment Preset 3 (reserved)
+; ^+9					Source Assignment Preset 4 (reserved)
+; ^+m					Time interpolation > Frame sampling
+; ^+k					Time interpolation > Frame blending
+; ^+o		 			Time interpolation > optical flow
+
+;----------------------------------------------------------------------------------
+; KEYS                  PHOTOSHOP FUNCTIONS
+;----------------------------------------------------------------------------------
+;^!h 					vertical flip
+;^h 					horizontal flip
+;----------------------------------------------------------------------------------
+
+
+; Be aware that sometimes other programs like PUUSH can overlap/conflict with your customized shortcuts.                          
+;___________________________________________________________________________________
+;
+; NOTE:
+; SC0E8: "scan code of an unassigned key" that I use to tell the computer "yeah, treat this like a keyboard,"
+; SC0E9: Nullify ALT's sticky key effect. See for more info: Alt_menu_acceleration_DISABLER.ahk
+; VK07:  #menumaskkey https://autohotkey.com/docs/commands/_MenuMaskKey.htm
+
+
+
+
+
+;---------------------BEGIN ASSIGNMENT OF ALL 18 K95 MACRO KEYS---------------------
+
+;----FIRST WE DO GLOBAL APPLICATION ASSIGNMENTS.-------
+
+; ;F21::return ;I didn't have this here until 2020 04 15, so idk if I actually need it...
+
+; ;;;update for the above line: "F21::Return" MAY cause the stuck modifiers error? Here's the keyhistory:
+; 84  06C	s	d	0.48	F21            	
+; 71  03C	h	d	0.00	F2             	
+; 71  03C	s	u	0.02	F2             	
+; A2  01D	i	d	0.00	LControl      <? AHK automatic 	
+; 84  06C	s	u	0.00	F21           < it gets tangled inside F21...
+; A0  02A	i	d	0.00	LShift         	
+; 79  044	i	d	0.00	F10            	
+; 79  044	i	u	0.00	F10            	
+; A0  02A	i	u	0.00	LShift         	
+;										<Lcontrol should have been sent UP.
+; A0  02A	i	d	0.02	LShift         	<and this is the next command to be sent, and it is behaving normally.
+; 79  044	i	d	0.00	F10            	
+; 79  044	i	u	0.00	F10            	
+; A0  02A	i	u	0.00	LShift         	
+; ;and then notice how Lcontrol is NOT sent back up. Only down.
+
+
+
+
+
+; ; 1B  001	#	d	0.17	Escape         	
+; ; 1B  001	 	u	0.13	Escape         	
+; ; 81  069	h	d	0.26	F18            	
+; ; A4  038	i	d	0.00	LAlt           	
+; ; A0  02A	i	d	0.02	LShift         	
+; ; 35  006	i	d	0.00	5              	
+; ; 35  006	i	u	0.00	5              	
+; ; A0  02A	i	u	0.00	LShift         	
+; ; A4  038	i	u	0.01	LAlt           	
+; ; 81  069	s	u	0.11	F18            	
+; ; 13  045	h	d	1.98	Pause          	
+; ; 13  045	s	u	0.06	Pause     
+
+
+
+/*
+See "Almost_All_Windows_Functions.ahk" for a much more complete explanation of the following macro key assignments
+
+G13: "back" (varies per app)
+G14: Activate Notepad++
+G15: Activae Word
+G16: Activate Firefox, then CTRL TAB on subsequent key presses.
+G17: Activate Explorer, then browse through the windows on subsequent key presses
+G18: Activate/switch to Premiere
+*/
+
+
+
+
+
+
+
+/*
+;Premiere, Sorted by Macro key
+G7:  F19 - V1 A1 locker
+G8:  F18 - Horizontal Anchor
+G9:  F17 - rotation
+G10: F21 & F9 - 90 IRE
+G11: F15 - Vertical Anchor
+G12: F14 - Scale
+G13: F13 - "Back" in a bin
+
+
+;Premiere, sorted by Function key.
+G13: F13 - "Back" in a bin
+G12: F14 - Scale
+G11: F15 - Vertical Anchor
+	;F16 is free
+G7:  F17 - rotation
+G10: F18 - Horizontal Anchor
+G8:  F19 - V1 A1 locker
+	;F20 is "Disable"
+G9:  F21 & F9 - add 7 gain. There are others
+	;F22 is free??
+
+	;F23 is the K120 keyboard
+	;F24 is the Azio macro keyboard
+*/
+
+
+
+;F20 is triggered by CapsLock, and adds a 2nd layer to keyboard #1 - (Outdated)
+;F21 - Being used as a modifier key to avoid the stuck modifiers bug
+;F22 - Free
+;F23 is for the 2nd keyboard (Logitech K120)
+;F24 (SC076) is the FULL AZIO KEYBOARD. F24 used to be used for LuaMacros.
+
+
+
+
+
+line 669, 323: function keys paired with control are scattered
+line 532 closeTitler
+line 154 commented out dumb code

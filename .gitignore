@@ -1,10 +1,77 @@
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
+
+# =========================
+# Operating System Files
+# =========================
+
+# OSX
+# =========================
+
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 PR 2014.txt
 PR 2017.txt
-Taran's Windows Mods/SavedExplorerAddress.txt
-Taran's Windows Mods/SavedExplorerAddress.txt
-Taran's Windows Mods/SavedExplorerAddress.txt
-Taran's Windows Mods/SavedExplorerAddress.txt
-Taran's Windows Mods/SavedExplorerAddress.txt
 Taran's Windows Mods/SavedExplorerAddress.txt
 do not use/All Premiere Functions - Copy 2.ahk
 do not use/All Premiere Functions - Copy.ahk
@@ -19,37 +86,21 @@ suspicious SYNC - ignore me/All Premiere Functions - suspicious backup.ahk
 suspicious SYNC - ignore me/Almost All Windows Functions - IMPOSTER.ahk
 do not use/test SENDING scancodes please ignoree.ahk
 test  plz ignoree.ahk
-Taran's Windows Mods/SavedExplorerAddress.txt
-Taran's Windows Mods/SavedExplorerAddress.txt
-Taran's Windows Mods/SavedExplorerAddress.txt
-Taran's Windows Mods/SavedExplorerAddress.txt
-Taran's Windows Mods/SavedExplorerAddress.txt
-Taran's Windows Mods/SavedExplorerAddress.txt
 FYI/KEYCAP IMAGES for STREAM DECK/tempalte-for-missing.psd
 do not use/DO NOT USE - fake scroll FF.ahk
 2nd keyboard support files/debug.log
 FYI/~$Table_of_all_scan_codes.xlsx
-FYI/~$Table_of_all_scan_codes.xlsx
-FYI/~$Table_of_all_scan_codes.xlsx
-FYI/~$Table_of_all_scan_codes.xlsx
 FYI/scancode.doc
-FYI/~$Table_of_all_scan_codes.xlsx
-Taran's_Windows_Mods/SavedExplorerAddress.txt
-Taran's_Windows_Mods/SavedExplorerAddress.txt
 Taran's_Windows_Mods/SavedExplorerAddress.txt
 3 things text.txt
-Taran's_Windows_Mods/SavedExplorerAddress.txt
 INFO_and_PROFILES/KEYCAP_IMAGES/in progress/drop shadow.psd
 KEYCAP_IMAGES/in progress/new ones/from Phpotoshop(UpResNet10)(scale)(tta)(x4.000000).png
 KEYCAP_IMAGES/in progress/new ones/from Phpotoshop(UpResNet10)(scale)(tta)(x4.000000).psd
 KEYCAP_IMAGES/in progress/new ones/from Phpotoshop.png
 KEYCAP_IMAGES/in progress/new ones/ease in and out.png
 Taran's_Windows_Mods/SECRET_SERVER_PASS_NOT_ON_GITHUB.txt
-Taran's_Windows_Mods/SavedExplorerAddress.txt
 Taran's_Windows_Mods/SECRET_TEXT_NOT_ON_GITHUB.txt
 Taran's_Windows_Mods/SECRET_TEXT_2.txt
-Taran's_Windows_Mods/SavedExplorerAddress.txt
-Taran's_Windows_Mods/SavedExplorerAddress.txt
 directly_launched/nope/paste1.ahk
 directly_launched/nope/Copy8.ahk
 directly_launched/nope/Copy7.ahk
@@ -67,30 +118,4 @@ Taran's_Windows_Mods/multi_copy_paste/clipboards/clippy4.txt
 Taran's_Windows_Mods/multi_copy_paste/clipboards/clippy3.txt
 Taran's_Windows_Mods/multi_copy_paste/clipboards/clippy2.txt
 Taran's_Windows_Mods/multi_copy_paste/clipboards/clippy1.txt
-Taran's_Windows_Mods/SavedExplorerAddress.txt
-Taran's_Windows_Mods/multi_copy_paste/clipboards/clippy1.txt
-Taran's_Windows_Mods/multi_copy_paste/clipboards/clippy2.txt
-Taran's_Windows_Mods/multi_copy_paste/clipboards/clippy3.txt
-Taran's_Windows_Mods/multi_copy_paste/clipboards/clippy4.txt
-Taran's_Windows_Mods/multi_copy_paste/clipboards/clippy5.txt
-Taran's_Windows_Mods/multi_copy_paste/clipboards/clippy6.txt
-Taran's_Windows_Mods/multi_copy_paste/clipboards/clippy7.txt
-Taran's_Windows_Mods/multi_copy_paste/clipboards/clippy8.txt
 Taran's_Windows_Mods/Corsair_debounce_double_keys.ahk
-Taran's_Windows_Mods/multi_copy_paste/clipboards/clippy1.txt
-Taran's_Windows_Mods/multi_copy_paste/clipboards/clippy2.txt
-Taran's_Windows_Mods/multi_copy_paste/clipboards/clippy3.txt
-Taran's_Windows_Mods/multi_copy_paste/clipboards/clippy4.txt
-Taran's_Windows_Mods/multi_copy_paste/clipboards/clippy5.txt
-Taran's_Windows_Mods/multi_copy_paste/clipboards/clippy6.txt
-Taran's_Windows_Mods/multi_copy_paste/clipboards/clippy7.txt
-Taran's_Windows_Mods/multi_copy_paste/clipboards/clippy8.txt
-Taran's_Windows_Mods/SavedExplorerAddress.txt
-Taran's_Windows_Mods/multi_copy_paste/clipboards/clippy1.txt
-Taran's_Windows_Mods/multi_copy_paste/clipboards/clippy2.txt
-Taran's_Windows_Mods/multi_copy_paste/clipboards/clippy3.txt
-Taran's_Windows_Mods/multi_copy_paste/clipboards/clippy4.txt
-Taran's_Windows_Mods/multi_copy_paste/clipboards/clippy5.txt
-Taran's_Windows_Mods/multi_copy_paste/clipboards/clippy6.txt
-Taran's_Windows_Mods/multi_copy_paste/clipboards/clippy7.txt
-Taran's_Windows_Mods/multi_copy_paste/clipboards/clippy8.txt
